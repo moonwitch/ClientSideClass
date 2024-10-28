@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News!</title>
+</head>
+<body>
+    <script>
+        let receive = confirm("Ben je zeker dat je onze nieuwsbrief niet langer wenst te ontvangen?");
+        if (receive) {
+            if (confirm("Wilt u de mogelijkheid behouden om af en toe belangrijke updates of speciale aanbiedingen van ons te ontvangen ?")) {
+                document.write("We hebben je nieuwsbriefvoorkeur gewijzigd naar 'enkel belangrijke updates'.");
+            } else {
+                document.write("We hebben je uitgeschreven van onze nieuwsbrief.");
+            }
+        } else {
+            document.write("Je nieuwsbriefvoorkeuren blijven ongewijzigd.");
+        } 
+    </script>
+</body>
+</html>
