@@ -6,6 +6,27 @@
     <title>De lichtschakelaar</title>
 </head>
 <body>
-    <img src="img/off.png" alt="lichtschakelaar">
+    <img src="img/off.png" alt="lichtschakelaar" id="light-switch">
+    <p id="lichtekes"></p>
+
+    <script>
+        let lightSwitch = document.getElementById("light-switch");
+        let lightSwitchState = false;
+
+        lightSwitch.addEventListener("click", function() {
+            lightSwitchState = !lightSwitchState; // Toggle the state
+            
+            if (lightSwitchState) {
+                document.querySelector("#lichtekes").innerHTML = "Het licht werd aangeschakeld.";
+            } else {
+                document.querySelector("#lichtekes").innerHTML = "Het licht werd uitgeschakeld.";
+            }
+            // if (lightSwitch.src.includes("off")) {
+            //     lightSwitch.src = "img/on.png";
+            // } else {
+            //     lightSwitch.src = "img/off.png";
+            // }
+        });
+    </script>
 </body>
 </html>

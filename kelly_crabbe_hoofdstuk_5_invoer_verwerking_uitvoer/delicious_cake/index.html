@@ -6,6 +6,16 @@
     <title>Verrukkelijke cake</title>
 </head>
 <body>
-    <img src="img/cake.png" alt="aardbeicake">
+    <img src="img/cake.png" alt="aardbeicake" onmouseenter="noTouch()" onmouseleave="cooled()">
+
+    <script>
+        function noTouch() {
+            console.log("Blijf van de cake af! Ze is nog warm!");
+        }
+
+        function cooled() {
+            console.log("Eenmaal de cake afgekoeld is, mag je een stuk nemen.");
+        }
+    </script>
 </body>
 </html>
