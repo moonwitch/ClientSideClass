@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiley's</title>
+</head>
+<body>
+    <img src="img/1.png" width="200px" id="elmo" alt="smile">
+
+    <button id="reset">Reset</button>
+
+    <script>
+        let elmo = document.querySelector("#elmo");
+        let reset = document.querySelector("#reset");
+
+        // Increment from 1 to 6 and then back to 1
+        let elmoState = 1;
+
+        elmo.addEventListener("click", function(){
+            elmoState++;
+            if (elmoState > 6) {
+                elmoState = 1;
+            }
+            elmo.src = `img/${elmoState}.png`;
+        });
+
+        reset.addEventListener("click", function(){
+            elmoState = 1;
+            elmo.src = `img/${elmoState}.png`;
+        });
+    </script>
+</body>
+</html>

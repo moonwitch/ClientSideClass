@@ -5,27 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De lichtschakelaar</title>
 </head>
-<body>
+<body style="background-color: palegoldenrod;">
     <img src="img/off.png" alt="lichtschakelaar" id="light-switch">
-    <p id="lichtekes"></p>
+    <p id="lichtekes">En het begint</p>
 
     <script>
-        let lightSwitch = document.getElementById("light-switch");
+        const lightSwitch = document.getElementById("light-switch");
+        const body = document.querySelector("body");
+        const paragraph = document.querySelector("p");
         let lightSwitchState = false;
 
         lightSwitch.addEventListener("click", function() {
             lightSwitchState = !lightSwitchState; // Toggle the state
             
             if (lightSwitchState) {
-                document.querySelector("#lichtekes").innerHTML = "Het licht werd aangeschakeld.";
+                lightSwitch.src = "img/on.png"
+                // Omdat dit specifiec enkel in DIE p tag mag, behoud ik hier wel de selector.
+                document.querySelector("#lichtekes").innerHTML = "Het licht werd aangeschakeld."; 
+                body.style.backgroundColor = 'palegoldenrod';
+                paragraph.style.color = 'darkslategrey';
             } else {
+                lightSwitch.src = "img/off.png";
+                // Omdat dit specifiec enkel in DIE p tag mag, behoud ik hier wel de selector.
                 document.querySelector("#lichtekes").innerHTML = "Het licht werd uitgeschakeld.";
+                body.style.backgroundColor = 'darkslategrey';
+                paragraph.style.color = 'palegoldenrod';
             }
-            // if (lightSwitch.src.includes("off")) {
-            //     lightSwitch.src = "img/on.png";
-            // } else {
-            //     lightSwitch.src = "img/off.png";
-            // }
         });
     </script>
 </body>

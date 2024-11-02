@@ -10,7 +10,7 @@
     <input type="number" id="age" name="age">
     <button id="age-request">Welk abbo kan ik gebruiken?</button>
 
-    <p id="subscription"></p>
+    <p id="subscription"></p><!-- Lege paragraag voor JS -->
 
     <script>
         document.getElementById("age-request").addEventListener("click", function() {
@@ -28,7 +28,8 @@
                 sub = "Omnipas 65+";
             }
 
-            document.write(`Je bent ${age} jaar oud en kan gebruik maken van een ${sub} om onbeperkt met de bus te reizen.`);
+            document.querySelector("#subscription").innerHTML = `Je bent ${age} jaar oud en kan gebruik maken van een ${sub} om onbeperkt met de bus te reizen.`;
+            // document.write(`Je bent ${age} jaar oud en kan gebruik maken van een ${sub} om onbeperkt met de bus te reizen.`);
         });
     </script>
 </body>
