@@ -377,6 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
   DOM.gameHighscorePlayAgainButton.addEventListener("click", () => {
     resetGame();
     startGame();
+    DOM.gameHighscore.style.display = "none";
   });
 
   DOM.gameHighscoreStopGameButton.addEventListener("click", () => {
